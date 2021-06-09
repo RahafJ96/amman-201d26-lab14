@@ -29,7 +29,7 @@ function showCart() {
 
   // TODO: Find the table body
   let tbody = document.getElementById('tbody');
-  console.log(cart.items.length);
+  //console.log(cart.items.length);
   // TODO: Iterate over the items in the cart
   // TODO: Create a TR
   for (let i = 0; i < cart.items.length; i++) {

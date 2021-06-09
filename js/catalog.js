@@ -14,10 +14,8 @@ function populateForm() {
   for (let i in Product.allProducts) {
     let optionTag=document.createElement('option');
     selectElement.appendChild(optionTag)
-    //????
+    
     optionTag.textContent=Product.allProducts[i].name;
-
-
 
   }
 
@@ -50,7 +48,8 @@ function addSelectedItemToCart() {
   console.log(item,quantity);
   // TODO: using those, add one item to the Cart
   cart.addItem(item,quantity);
-  console.log(cart.items);
+  //console.log(cart.items);
+
 }
 // let counter=0;
 // TODO: Update the cart count in the header nav with the number of items in the Cart
@@ -69,8 +68,8 @@ function updateCartPreview() {
   let quantity=document.getElementById('quantity').value;
   let itemSelected=document.getElementById('item');
   let itemName = Product.allProducts[itemSelected].name;
-  // TODO: Add a new element to the cartContents div with that information
   
+  // TODO: Add a new element to the cartContents div with that information
   let listElement = document.getElementById('cartContents');
   cartContents.appendChild(listElement);
   listElement.textContent= ` Item name: ${it} and Quantity: ${quantity} `;
