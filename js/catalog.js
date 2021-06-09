@@ -14,7 +14,6 @@ function populateForm() {
   for (let i in Product.allProducts) {
     let optionTag=document.createElement('option');
     selectElement.appendChild(optionTag)
-    
     optionTag.textContent=Product.allProducts[i].name;
 
   }
