@@ -45,20 +45,24 @@ function showCart() {
       td3.textContent=cart.items[i].product;
       tr.appendChild(td3); 
       console.log(cart.items[i].quantity);
-
+      td1.id=i;
+      
+    }
+    // TODO: Create a TD for the delete link, quantity,  and the item
+    // TODO: Add the TR to the TBODY and each of the TD's to the TR
+    
   }
-  // TODO: Create a TD for the delete link, quantity,  and the item
-  // TODO: Add the TR to the TBODY and each of the TD's to the TR
+  
+  function removeItemFromCart(event) {
+    
+    console.log(event.target.id);
+    // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
+    cart.removeItem(event.target.id);  
+    // TODO: Save the cart back to local storage
 
-}
-
-function removeItemFromCart(event) {
-
-  // TODO: When a delete link is clicked, use cart.removeItem to remove the correct item
-  cart.removeItem();
-  // TODO: Save the cart back to local storage
   // TODO: Re-draw the cart table
-
+  clearCart();
+  showCart();
 }
 
 // This will initialize the page and draw the cart on screen
